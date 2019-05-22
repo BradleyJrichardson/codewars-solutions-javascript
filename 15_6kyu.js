@@ -29,14 +29,15 @@
 
 const digital_root = n => {
   let string = n.toString();
-  while (string.length > 0) {
-    console.log("hello");
-    return string
+  while (string.length > 1) {
+    console.log(string);
+    string = string
       .split("")
       .map(Number)
       .reduce((a, b) => a + b)
       .toString();
   }
+  return parseInt(string);
 };
 
 console.log(digital_root(3412341));

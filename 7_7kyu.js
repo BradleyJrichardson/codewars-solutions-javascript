@@ -8,23 +8,20 @@
 
 // // Note: for this kata y isn't considered a vowel.
 
-
-remove a e i o u 
+// remove a e i o u
 
 function disemvowel(str) {
-  return str.replace(/[aeiou]/ig,'')
+  return str.replace(/[aeiou]/gi, "");
 }
 
-const disemvowel = (str) => {
-  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-  let newStr = '';
+const disemvowel = str => {
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  let newStr = "";
   for (let i = 0; i <= str.length; i++) {
     let char = str.charAt(i);
     if (vowels.indexOf(char) == -1) {
       newStr += char;
     }
   }
-    return newStr;
-    
-  
+  return newStr;
 };
