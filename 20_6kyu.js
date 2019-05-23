@@ -6,10 +6,15 @@
 // uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
-var uniqueInOrder = function(iterable) {
-  //your code here - remember iterable can be a string or an array
+const uniqueInOrder = iterable => {
+  return iterable
+    .split("")
+    .sort((a, b) => {
+      a > b ? 1 : -1;
+    })
+    .filter(function(item, pos) {
+      a.indexOf(item) == pos;
+    });
 };
 
-const uniqueInOrder = iterable => {
-  iterable.
-};
+uniqueInOrder("AAAABBBCCDAABBB");
