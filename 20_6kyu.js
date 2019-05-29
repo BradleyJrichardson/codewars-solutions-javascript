@@ -7,14 +7,10 @@
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
 const uniqueInOrder = iterable => {
-  return iterable
-    .split("")
-    .sort((a, b) => {
-      a > b ? 1 : -1;
-    })
-    .filter(function(item, pos) {
-      a.indexOf(item) == pos;
-    });
+  let array = iterable.split("");
+  return array.filter(function(item, pos) {
+    return array.indexOf(item) == pos;
+  });
 };
 
-uniqueInOrder("AAAABBBCCDAABBB");
+console.log(uniqueInOrder("AAAABBBCCDAABBB"));
