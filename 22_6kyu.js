@@ -3,9 +3,8 @@
 // Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
 
 const countBits = n => {
-  if (n === 0) {
-    return 0;
-  } else {
-    var digit = parseInt(binary, 2);
-  }
+  return n
+    .toString(2)
+    .split("0")
+    .join("").length;
 };
