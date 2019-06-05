@@ -50,3 +50,23 @@ const looseChange = cents => {
 };
 
 console.log(looseChange(94));
+
+function looseChange(cents) {
+  var coins = { Nickels: 0, Pennies: 0, Dimes: 0, Quarters: 0 };
+
+  if (cents <= 0) {
+    return coins;
+  }
+  cents = Math.floor(cents);
+
+  coins.Quarters = Math.floor(cents / 25);
+  var centsLeftOver = cents % 25;
+
+  coins.Dimes = Math.floor(centsLeftOver / 10);
+  centsLeftOver = centsLeftOver % 10;
+
+  coins.Nickels = Math.floor(centsLeftOver / 5);
+  coins.Pennies = centsLeftOver % 5;
+
+  return coins;
+}
