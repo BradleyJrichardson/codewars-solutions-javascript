@@ -19,6 +19,10 @@ const moveZeros = arr => {
 
 console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"]));
 
+//
+//
+// alternative solutions
+
 var moveZeros = function(arr) {
   return arr
     .filter(function(x) {
