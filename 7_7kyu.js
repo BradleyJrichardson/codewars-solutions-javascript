@@ -9,7 +9,6 @@
 // // Note: for this kata y isn't considered a vowel.
 
 // remove a e i o u
-
 function disemvowel(str) {
   return str.replace(/[aeiou]/gi, "");
 }

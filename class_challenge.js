@@ -9,16 +9,14 @@
 // Output: false
 
 const atomicBlonde = num => {
-  let sum = num
-    .toString()
+  let sum = String(num)
     .split("")
     .map(Number)
     .reduce((a, b) => {
       return a + b;
     }, 0);
 
-  let product = num
-    .toString()
+  let product = String(num)
     .split("")
     .map(Number)
     .reduce((a, b) => {
