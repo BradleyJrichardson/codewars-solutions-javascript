@@ -12,10 +12,11 @@ const orderWeight = strng => {
   let result = strng
     .split(" ")
     .map((num, i) => [num, sumNum[i]])
-    .sort((a, b) => a[1] - b[1])
-    .map(subArray => {
-      return subArray[0];
+    .sort((item1, item2) => {
+      if (item1[1] === item2[1]) return item1[0] > item2[0] ? 1 : -1;
+      else return item1[1] - item2[1];
     })
+    .map(item => item[0])
     .join(" ");
 
   return result;
